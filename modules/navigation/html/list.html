@@ -1,0 +1,6 @@
+<li data-id="<%item.id%>" ng-repeat="item in item.children" class="dd-item">
+	<div data-id="<%item.id%>" class="dd-handle"><%item.title%></div>
+	<span ng-click="remove()" class="remove-collection glyphicon glyphicon-remove" style="right:2px; top:7px; z-index:10; position:absolute; cursor:pointer;"></span>
+	<span ng-click="edit()" class="edit-collection glyphicon glyphicon-edit" style="right: 20px;top:7px;z-index:10;position:absolute;cursor:pointer;"></span>			
+	<ol class="dd-list" ng-if="item.children.length > 0" ng-include="'/modules/navigation/html/list.html'"></ol>
+</li>
